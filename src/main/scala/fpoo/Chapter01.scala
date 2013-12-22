@@ -18,6 +18,7 @@ object Chapter01 {
     def prefixOf(that: Seq[A]): Boolean = {
       (that take seq.length) == seq
     }
+    def tails1: Seq[Seq[A]] = seq.tails.toSeq
     def tails2: Seq[Seq[A]] = {
       def tailn(s: Seq[A]): Seq[Seq[A]] = s match {
         case Seq() => Seq(s)

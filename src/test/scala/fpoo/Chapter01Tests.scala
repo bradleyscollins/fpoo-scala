@@ -128,12 +128,17 @@ class PrefixOfSpec extends UnitSpec {
   }
 }
 
-class Tails2Spec extends UnitSpec {
-  "Exercise 7: tails2" should "return a sequence of successively smaller subsequences of the argument" in {
-    (1 to 4).tails2 should be (Seq(1 to 4, 2 to 4, 3 to 4, 4 to 4, 4 until 4))
+class TailsSpec extends UnitSpec {
+  val seq = 1 to 4
+  val expected = Seq(1 to 4, 2 to 4, 3 to 4, 4 to 4, 4 until 4)
+  "Exercise 7a: tails1" should "return a sequence of successively smaller subsequences of the argument" in {
+    seq.tails1 should be (expected)
   }
-  "Exercise 7a: tails3" should "return a sequence of successively smaller subsequences of the argument" in {
-    (1 to 4).tails3 should be (Seq(1 to 4, 2 to 4, 3 to 4, 4 to 4, 4 until 4))
+  "Exercise 7b: tails2" should "return a sequence of successively smaller subsequences of the argument" in {
+    seq.tails2 should be (expected)
+  }
+  "Exercise 7c: tails3" should "return a sequence of successively smaller subsequences of the argument" in {
+    seq.tails3 should be (expected)
   }
 }
 
