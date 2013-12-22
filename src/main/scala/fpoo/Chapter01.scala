@@ -1,7 +1,6 @@
 package fpoo
 
 object Chapter01 {
-  // import 
   def second[A](list: List[A]): A = list(1)
   def third[A](list: List[A]): A = list(2)
   def third2[A](list: List[A]): A = list.tail.tail.head

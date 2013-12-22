@@ -23,20 +23,18 @@ class ThirdSpec extends UnitSpec {
     third(list) should be ("dolor")
   }
   it should "throw IndexOutOfBoundsException if called on a list with fewer than 3 elements" in {
-    val listOf2 = List("penulitimate", "ultimate")
+    val listOf2 = List("penultimate", "ultimate")
     a [IndexOutOfBoundsException] should be thrownBy {
       third(listOf2)
     } 
   }
-}
 
-class Third2Spec extends UnitSpec {
   "Exercise 2b: third2" should "return the third item in a given list" in {
     val list = List("Lorem", "ipsum", "dolor", "sit", "amet")
     third2(list) should be ("dolor")
   }
   it should "throw NoSuchElementException if called on a list with fewer than 3 elements" in {
-    val listOf2 = List("penulitimate", "ultimate")
+    val listOf2 = List("penultimate", "ultimate")
     a [NoSuchElementException] should be thrownBy {
       third2(listOf2)
     } 
@@ -54,7 +52,7 @@ class AddSquaresSpec extends UnitSpec {
   }
 }
 
-class BizareFactorialSpec extends UnitSpec with TableDrivenPropertyChecks {
+class BizarreFactorialSpec extends UnitSpec with TableDrivenPropertyChecks {
   "Exercise 4: bizarreFactorial" should "compute the factorial, i.e., n!, of a given integer n >= 0" in {
     val factorials = Table(
       ("n", "factorial"),
