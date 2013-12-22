@@ -122,9 +122,9 @@ class OtherFunctionsSpec extends UnitSpec {
   }
 }
 
-class StartsWithSpec extends UnitSpec {
-  "Exercise 6: startsWith" should "test whether a sequence begins with the same element of another sequence" in {
-    (1 to 10) startsWith (1 to 3) should be (true)
+class PrefixOfSpec extends UnitSpec {
+  "Exercise 6: prefixOf" should "test whether a sequence consists of the first few elements of another sequence" in {
+    (1 to 3) prefixOf (1 to 10) should be (true)
   }
 }
 
