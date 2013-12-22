@@ -93,8 +93,8 @@ class OtherFunctionsSpec extends UnitSpec {
   }
 
   "Exercise 5e: interleave" should "interleave the elements of two sequences together" in {
-    val evens = Seq(0, 2, 4, 6, 8)
-    val odds = Seq(1, 3, 5, 7, 9)
+    val evens = 0 to 8 by 2
+    val odds = 1 to 9 by 2
     evens interleave odds should be (0 to 9)
   }
 

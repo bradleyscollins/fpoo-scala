@@ -13,7 +13,7 @@ object Chapter01 {
   
   implicit class Ops[A](val seq: Seq[A]) extends AnyVal {
     def interleave(that: Seq[A]): Seq[A] = {
-      seq zip that flatMap { t => Seq(t._1, t._2) }
+      (seq, that).zipped flatMap { Seq(_, _) }
     }
     def prefixOf(that: Seq[A]): Boolean = {
       (that take seq.length) == seq
