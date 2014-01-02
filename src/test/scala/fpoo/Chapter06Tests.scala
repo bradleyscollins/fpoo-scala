@@ -4,19 +4,6 @@ import org.scalatest._
 import org.scalatest.prop.TableDrivenPropertyChecks
 import fpoo.Chapter06._
 
-// class FactorialSpec extends UnitSpec {
-//   "Exercise 1: second" should "return the second item in a given list" in {
-//     val list = List("Lorem", "ipsum", "dolor", "sit", "amet")
-//     second(list) should be ("ipsum")
-//   }
-//   it should "throw IndexOutOfBoundsException if called on a list with fewer than 2 elements" in {
-//     val listOf1 = List("sole")
-//     a [IndexOutOfBoundsException] should be thrownBy {
-//       second(listOf1)
-//     } 
-//   }
-// }
-
 class FactorialSpec extends UnitSpec with TableDrivenPropertyChecks {
   "Chapter 6, Exercise 1: factorial" should "compute the factorial, i.e., n!, of a given integer n >= 0" in {
     val factorials = Table(
